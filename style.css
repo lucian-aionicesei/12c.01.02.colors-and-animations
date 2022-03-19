@@ -1,0 +1,404 @@
+/* Resetter */
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+:root {
+  --color-primary1: #f1f2fc;
+  --color-primary2: #dbdbdb;
+  --color-secondary1: #0b1c35;
+  --color-secondary2: #0f223f;
+  --color-accent1: #29c9a1;
+  --color-accent2: #ee5c18;
+}
+
+
+
+.dark-mode {
+  --color-primary1: #f1f2fc;
+  --color-primary2: #051438;
+  --color-secondary1: #0a101a;
+  --color-secondary2: #141d2b;
+  --color-accent1: #29c9a1;
+  --color-accent2: #ee5c18;
+}
+
+
+/* Fonts */
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-secondary1);
+  font-family: "Noto Serif Display", serif;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 3.052rem;
+}
+
+h2 {
+  font-size: 1.953rem;
+  line-height: 2.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-family: "Poppins", sans-serif;
+}
+
+p {
+  color: var(--color-secondary1);
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-secondary1);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* UI Elements */
+button {
+  display: inline-block;
+  height: 3rem;
+  padding: 1rem 2rem;
+  border: none;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--color-accent2);
+  color: var(--color-primary1);
+}
+
+.dark_button {
+  background-color: var(--color-accent1);
+  color: var(--color-secondary1);
+}
+
+input[type="text"] {
+  box-sizing: border-box;
+  width: 250px;
+  height: 3rem;
+  padding: 1rem 1rem;
+  font-size: 1rem;
+  text-align: left;
+  background-color: var(--color-primary1);
+  border-color: #ddd;
+  color: var(--color-secondary1);
+}
+
+/* Menu */
+nav {
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-secondary2);
+}
+
+#moon-icon, #sun-icon {
+  padding: 0px 10px;
+  display: none;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 18px;
+  margin: 0px 1rem;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(194, 194, 194);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 2px;
+  bottom: 2px;
+  background-color: rgb(255, 255, 255);
+  -webkit-transition: .4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #f04f0f;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(18px);
+  transform: translateX(18px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+nav a {
+  color: var(--color-primary1);
+  text-decoration: none;
+}
+
+nav a.logo {
+  font-family: "Noto Serif Display", serif;
+  font-size: 1.25rem;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0px 1rem;
+}
+
+/* Header */
+header {
+  display: flex;
+  min-height: 80vh;
+  padding: 5rem;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: var(--color-secondary1);
+}
+
+header #blue-alpaca {
+  position: absolute;
+  width: 22rem;
+  z-index: 2;
+  left: 10px;
+}
+
+header #orange-alpaca {
+  position: relative;
+  width: 22rem;
+  filter: drop-shadow(0px 0px 10px #f19c74);
+}
+
+header h1 {
+  color: var(--color-primary1);
+}
+
+header p {
+  color: var(--color-primary1);
+}
+
+header button {
+  margin-bottom: 5rem;
+}
+
+.header_text {
+  width: 30vw;
+  min-width: 300px;
+}
+
+.header_graphics {
+  position: relative;
+  min-width: 300px;
+  min-height: 300px;
+}
+
+/* product section */
+#product {
+  padding: 2rem;
+  background-color: var(--color-secondary2);
+  min-width: 15rem;
+  min-height: 15rem;
+}
+
+#product h3 {
+  font-size: 1.953rem;
+  line-height: 2.5rem;
+  color: var(--color-primary1);
+}
+
+#product p {
+  color: var(--color-primary1);
+}
+
+#product a {
+  color: var(--color-accent1);
+}
+
+#product article {
+  display: flex;
+  min-height: 50vh;
+  padding: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.product_text {
+  width: 50vw;
+  min-width: 300px;
+}
+
+.product_graphics {
+  width: 15vw;
+  height: 15vw;
+  min-width: 150px;
+  min-height: 150px;
+  margin: 3rem;
+  border-radius: 300px;
+  position: relative;
+}
+
+#animated-icon1, #animated-icon2 {
+  position: absolute;
+  width: 15rem;
+  z-index: 2;
+  left: 10px;
+}
+
+/* highlight sections */
+.highlight {
+  display: flex;
+  min-height: 70vh;
+  padding: 2rem;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--color-primary2);
+}
+
+.highlight a {
+  color: var(--color-accent2);
+}
+
+.highlight div {
+  width: 80vw;
+  color: var(--color-secondary2);
+}
+
+.highlight div h2 {
+  font-size: 3.052rem;
+  line-height: 4rem;
+}
+
+.dark {
+  background-color: var(--color-secondary1);
+}
+
+.dark h2 {
+  color: var(--color-primary1);
+}
+
+.dark-mode-h2, .dark-mode-p {
+  color: var(--color-primary1);
+}
+
+.dark a {
+  color: var(--color-accent2);
+}
+
+/* request section */
+#request {
+  display: flex;
+  min-height: 50vh;
+  padding: 2rem;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--color-primary2);
+}
+
+#request div {
+  width: 50vw;
+  min-width: 450px;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  padding: 5vh 2rem;
+  align-items: top;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: var(--color-secondary1);
+  color: var(--color-primary1);
+}
+
+footer h2,
+footer h3 {
+  color: var(--color-primary1);
+}
+
+footer a {
+  color: var(--color-primary1);
+}
+
+footer section.left {
+  display: flex;
+  max-width: 50vw;
+  align-items: top;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer section div {
+  margin: 0px 1rem 1rem 1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+
+  .highlight h2 {
+    color: var(--color-primary1);
+  }
+
+  #request h2, #request p {
+    color: var(--color-primary1);
+  }
+
+  :root {
+    --color-primary1: #f1f2fc;
+    --color-primary2: #051c52;
+    --color-secondary1: #0a101a;
+    --color-secondary2: #141d2b;
+    --color-accent1: #29c9a1;
+    --color-accent2: #ee5c18;
+  }
+  
+  
+}
